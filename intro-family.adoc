@@ -3,9 +3,17 @@ permalink: intro-family.html
 keywords: 
 summary: 
 ---
-= Page title goes here
+= NetApp Console
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-// learn more about this file https://review.docs.netapp.com/us-en/docs-help/repo-family/setup-info-family.html
+NetApp Console is offered in two deployment options: SaaS-based and local deployment.  NetApp Console SaaS is a cloud-based control plane that provides unified management of NetApp storage and data services across on-premises and multi-cloud environments.  NetApp Console local deployment is an on-premises deployment of the NetApp Console, with fleet managability features as well as AI-assisted storage management.
+
+== NetApp Console SaaS
+
+NetApp Console is a SaaS-based control plane that provides unified management of NetApp storage and data services across on-premises and multi-cloud environments. From a single browser-based interface, it enables discovery, provisioning, monitoring, and protection of a broad range of storage systems—including ONTAP, Cloud Volumes ONTAP, Amazon FSx for ONTAP, and Azure NetApp Files—alongside integrated data services such as backup and recovery, disaster recovery, and ransomware protection. A lightweight agent bridges the SaaS control plane to local assets with no inbound firewall changes required.
+
+== NetApp Console local deployment
+
+NetApp Console local deployment is the on-premises deployment of the NetApp Console control plane, designed for organizations with air-gap, data-sovereignty, or connectivity constraints. It delivers fleet-scale management of ONTAP systems—including provisioning, monitoring, alerting, and remediation—without any dependency on external cloud connectivity. An embedded agentic AI platform with bring-your-own-LLM support enables natural-language dashboards and AI-assisted operations, keeping all data and AI processing entirely within the customer's infrastructure.

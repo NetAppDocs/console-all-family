@@ -1,6 +1,6 @@
 settings:
   name: "Product Name"
-  search: 
+  search: console-all-famil
   internal:
     pdf_enabled: false
   prod:
