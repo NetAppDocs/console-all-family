@@ -21,7 +21,7 @@ NetApp hosts and maintains NetApp Console as a SaaS application. You sign up and
 
 NetApp Console also supports restricted mode (installed in your own public cloud with limited outbound connectivity) and private mode (installed on-premises or in your cloud with no connectivity to the NetApp Console platform, including air-gapped environments).
 
-https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about NetApp Console deployment modes^].
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about NetApp Console deployment modes].
 
 NetApp Console supports the broadest range of storage systems, including cloud storage such as Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3, Google Cloud Storage, E-Series, StorageGRID, and on-premises ONTAP clusters. It provides access to the full suite of NetApp data services, including NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Copy and Sync, and NetApp Data Classification. NetApp Console also provides support contract features such as Digital Advisor, Lifecycle Planning, and Sustainability dashboards.
 
@@ -57,7 +57,7 @@ Console local deployment supports on-premises ONTAP clusters and NetApp Backup a
 
 Console local deployment is best suited for organizations with large on-premises ONTAP environments that require policy-driven provisioning, automated compliance checks, and full data sovereignty.
 
-link:https://docs.netapp.com/us-en/concept-netapp-console-local.html[Learn about NetApp Console local deployment^.]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html[Learn about NetApp Console local deployment^.]
 
 == Feature comparison
 
