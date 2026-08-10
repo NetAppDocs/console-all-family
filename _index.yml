@@ -1,5 +1,4 @@
-product-family:
-  id: console-family
+product-family: 
   title: NetApp Console and NetApp Console local deployment
   lead: "NetApp offers two ways to run its unified storage management platform with NetApp Console and NetApp Console local deployment. Both share a common foundation, but they differ in architecture, connectivity, feature scope, and operational model."
   summary: "NetApp offers two ways to run its unified storage management platform: NetApp Console and NetApp Console local deployment. Both share a common foundation, but they differ in architecture, connectivity, feature scope, and operational model."
