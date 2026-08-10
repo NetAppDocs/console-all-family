@@ -13,7 +13,7 @@ product-family:
   
   tiles:
     - title: "Learn about NetApp Console and NetApp Console local deployment"
-      url: /intro-family.html
+      url: intro-family.html
       summary: "Compare NetApp Console local deployment with NetApp Console."
       tags: all, console, console-local
     - title: NetApp Console
