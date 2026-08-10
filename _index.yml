@@ -23,4 +23,4 @@ product-family:
     - title: NetApp Console local deployment
       url: ../console-local-family/index.html
       summary: "Learn about how NetApp Console local deployment gives teams intelligent fleet manageability in on-premises environments from one secure control plane."
-      tags: console-loca
+      tags: console-local
