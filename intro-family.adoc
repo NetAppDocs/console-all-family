@@ -1,19 +1,175 @@
 ---
+sidebar: sidebar
 permalink: intro-family.html
-keywords: 
-summary: 
+keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, active directory, bring-your-own-license
+summary: "NetApp Console is a SaaS application that uses Console agents to manage cloud and on-premises storage systems. NetApp Console local deployment is a self-hosted, agentless virtual machine for enterprise-scale ONTAP fleet management with policy enforcement, drift remediation, and full data sovereignty."
 ---
-= NetApp Console
+= Compare NetApp Console and NetApp Console local deployment
+:hardbreaks:
+:nofooter:
 :icons: font
+:linkattrs:
 :imagesdir: ./media/
 
 [.lead]
-NetApp Console is offered in two deployment options: SaaS-based and local deployment.  NetApp Console SaaS is a cloud-based control plane that provides unified management of NetApp storage and data services across on-premises and multi-cloud environments.  NetApp Console local deployment is an on-premises deployment of the NetApp Console, with fleet managability features as well as AI-assisted storage management.
+NetApp offers two ways to run its unified storage management platform: NetApp Console and NetApp Console local deployment. Both share a common foundation, but they differ in architecture, connectivity, feature scope, and operational model. NetApp Console uses Console agents deployed in your environment to manage storage systems. NetApp Console local deployment is an agentless virtual machine. NetApp Console local deployment communicates directly with ONTAP clusters and delivers enterprise fleet management capabilities not available in NetApp Console.
 
-== NetApp Console SaaS
+NOTE: Choose NetApp Console if you manage cloud and on-premises environments and want NetApp to handle platform infrastructure. Choose NetApp Console local deployment if you manage a large on-premises ONTAP estate and need full data sovereignty and policy-driven storage management.
 
-NetApp Console is a SaaS-based control plane that provides unified management of NetApp storage and data services across on-premises and multi-cloud environments. From a single browser-based interface, it enables discovery, provisioning, monitoring, and protection of a broad range of storage systems—including ONTAP, Cloud Volumes ONTAP, Amazon FSx for ONTAP, and Azure NetApp Files—alongside integrated data services such as backup and recovery, disaster recovery, and ransomware protection. A lightweight agent bridges the SaaS control plane to local assets with no inbound firewall changes required.
+== NetApp Console
+
+NetApp hosts and maintains NetApp Console as a SaaS application. You sign up and start managing storage immediately. To manage storage systems, you deploy lightweight Console agents in your cloud or on-premises environments. Agents connect outbound to the NetApp Console platform, and NetApp handles platform authentication, upgrades, and availability automatically.
+
+NetApp Console also supports restricted mode (installed in your own public cloud with limited outbound connectivity) and private mode (installed on-premises or in your cloud with no connectivity to the NetApp Console platform, including air-gapped environments).
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about NetApp Console deployment modes^].
+
+NetApp Console supports the broadest range of storage systems, including cloud storage such as Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3, Google Cloud Storage, E-Series, StorageGRID, and on-premises ONTAP clusters. It provides access to the full suite of NetApp data services, including NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Copy and Sync, and NetApp Data Classification. NetApp Console also provides support contract features such as Digital Advisor, Lifecycle Planning, and Sustainability dashboards.
+
+NetApp Console is best suited for organizations managing hybrid cloud environments that want the most features, less work to keep things running, and flexible licensing.
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html[Learn about NetApp Console^.]
 
 == NetApp Console local deployment
 
-NetApp Console local deployment is the on-premises deployment of the NetApp Console control plane, designed for organizations with air-gap, data-sovereignty, or connectivity constraints. It delivers fleet-scale management of ONTAP systems—including provisioning, monitoring, alerting, and remediation—without any dependency on external cloud connectivity. An embedded agentic AI platform with bring-your-own-LLM support enables natural-language dashboards and AI-assisted operations, keeping all data and AI processing entirely within the customer's infrastructure.
+NetApp Console local deployment lets you run the NetApp Console control plane entirely within your own on-premises infrastructure, with no management traffic leaving your environment. You deploy the Console as a virtual machine using a virtual appliance image and manage it like any other virtual machine in your vCenter environment. No Console agents are required. The virtual machine communicates directly with your ONTAP clusters.
+
+While NetApp Console private mode also supports air-gapped and on-premises deployments, Console local deployment is designed specifically for enterprise-scale ONTAP fleet management. It adds capabilities that are not available in any NetApp Console deployment mode:
+
+Storage class policies::
+Define storage standards once as reusable templates that bundle performance, capacity, and tiering requirements. All provisioning uses approved classes, and Console local deployment continuously monitors workloads for compliance and identifies drift.
+
+Fleet management::
+Organize clusters into folders and fleets that reflect your business structure, then delegate administration at organization, folder, or fleet scope.
+
+Workload Analyzer::
+Correlate latency, throughput, input/output operations per second, and configuration changes over time to find performance issues before they affect workloads.
+
+Large language model integration::
+Connect to your own large language model to provision storage using natural language, investigate alerts, and get contextual answers about your storage environment.
+
+Guided and automated remediation::
+When a workload drifts from its storage class or an alert fires, Console local deployment provides Fix-It recommendations. Use guided steps or one-click automated remediation to restore compliance without manual steps.
+
+Alert delivery via email and webhook::
+Configure email and webhook notification channels so that alerts reach the right teams when storage conditions change. Webhooks integrate with your existing monitoring and incident management tools.
+
+Console local deployment supports on-premises ONTAP clusters and NetApp Backup and Recovery. It integrates with Active Directory for federated authentication and supports multi-factor authentication for local users.
+
+Console local deployment is best suited for organizations with large on-premises ONTAP environments that require policy-driven provisioning, automated compliance checks, and full data sovereignty.
+
+link:https://docs.netapp.com/us-en/concept-netapp-console-local.html[Learn about NetApp Console local deployment^.]
+
+== Feature comparison
+
+=== Storage management
+
+[cols="3,2,2",options="header"]
+|===
+| Feature | NetApp Console | NetApp Console local deployment
+
+| On-premises ONTAP clusters
+| Yes (requires Console agent)
+| Yes (direct communication from Console virtual machine)
+
+| Cloud storage systems (Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3, and others)
+| Yes
+| No
+
+| E-Series and StorageGRID
+| Yes
+| No
+
+| NetApp Backup and Recovery
+| Yes
+| Yes
+
+| NetApp Disaster Recovery
+| Yes
+| No
+
+| NetApp Ransomware Resilience
+| Yes
+| No
+
+| NetApp Copy and Sync
+| Yes
+| No
+
+| NetApp Data Classification
+| Yes
+| No
+
+| Digital Advisor, Lifecycle Planning, Sustainability
+| Yes
+| No
+
+| Storage class policies and compliance monitoring
+| No
+| Yes
+
+| Guided and automated remediation
+| No
+| Yes
+
+| Fleet management (folders and fleets)
+| No
+| Yes
+
+| Workload Analyzer
+| No
+| Yes
+
+| Large language model integration for AI-assisted operations
+| No
+| Yes
+
+|===
+
+=== Console setup and security
+
+[cols="3,2,2",options="header"]
+|===
+| Feature | NetApp Console | NetApp Console local deployment
+
+| Deployment model
+| Software as a service, hosted by NetApp (different deployment modes available)
+| Self-hosted virtual machine in your own infrastructure
+
+| Console agent required
+| Yes
+| No
+
+| Software upgrades
+| Automatic, managed by NetApp
+| Manual
+
+| User interface access
+| NetApp Console application (internet or virtual machine access)
+| Console virtual machine (local, no internet required)
+
+| Data sovereignty
+| Management traffic goes to the NetApp Console platform
+| No data or management traffic leaves your environment
+
+| Active Directory integration
+| No
+| Yes
+
+| Identity federation
+| Yes
+| No
+
+| Multi-factor authentication (local users)
+| Yes
+| Yes
+
+| Audit logging
+| Yes
+| Yes
+
+| Licensing
+| Marketplace subscriptions and bring-your-own-license
+| Bring-your-own-license
+
+|===
