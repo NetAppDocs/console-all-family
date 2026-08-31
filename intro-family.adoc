@@ -57,7 +57,7 @@ Console local deployment supports on-premises ONTAP clusters and NetApp Backup a
 
 Console local deployment is best suited for organizations with large on-premises ONTAP environments that require policy-driven provisioning, automated compliance checks, and full data sovereignty.
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html[Learn about NetApp Console local deployment^.]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html[Learn about NetApp Console local deployment.^]
 
 == Feature comparison
 
